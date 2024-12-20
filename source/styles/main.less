@@ -1,5 +1,8 @@
 @import 'maps.less';
 
+@breakpointMobile: ~"(max-width: 767px)";
+@breakpointTablet: ~"(min-width: 768px) and (max-width: 1023px)";
+
 * {
     margin: 0;
     padding: 0;
@@ -20,6 +23,13 @@ li {
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
+
+    @media @breakpointTablet {
+        max-width: 70%;
+    }
+    @media @breakpointMobile {
+        max-width: 60%;
+    }
 }
 
 header {
@@ -82,3 +92,4 @@ section {
         background-color: #cores[HoverColor];
     }
 }
+
